@@ -143,7 +143,7 @@ Column: DEF_30_CNT_SOCIAL_CIRCLE
 8.0           2
 Name: DEF_30_CNT_SOCIAL_CIRCLE, dtype: int64
 
-Column: AMT_CREDIT_y
+Column: AMT_CREDIT_PREV
 0.00         274730
 45000.00      28973
 225000.00     17876
@@ -155,7 +155,7 @@ Column: AMT_CREDIT_y
 125123.94         1
 197284.50         1
 426406.50         1
-Name: AMT_CREDIT_y, Length: 81575, dtype: int64
+Name: AMT_CREDIT_PREV, Length: 81575, dtype: int64
 
 Column: DEF_60_CNT_SOCIAL_CIRCLE
 0.0     1278668
@@ -169,7 +169,7 @@ Column: DEF_60_CNT_SOCIAL_CIRCLE
 24.0          3
 Name: DEF_60_CNT_SOCIAL_CIRCLE, dtype: int64
 
-Column: AMT_GOODS_PRICE_y
+Column: AMT_GOODS_PRICE_PREV
 45000.000     39867
 225000.000    36730
 135000.000    34696
@@ -181,12 +181,7 @@ Column: AMT_GOODS_PRICE_y
 173866.500        1
 220009.500        1
 293256.225        1
-Name: AMT_GOODS_PRICE_y, Length: 86514, dtype: int64
-
-Column: TARGET
-0    1283113
-1     121699
-Name: TARGET, dtype: int64
+Name: AMT_GOODS_PRICE_PREV, Length: 86514, dtype: int64
 
 Column: OBS_30_CNT_SOCIAL_CIRCLE
 0.0      729871
@@ -279,7 +274,7 @@ Column: DAYS_LAST_DUE_1ST_VERSION
 1798.0          1
 Name: DAYS_LAST_DUE_1ST_VERSION, Length: 4603, dtype: int64
 
-Column: AMT_ANNUITY_y
+Column: AMT_ANNUITY_PREV
 2250.000     26222
 11250.000    11959
 6750.000     11510
@@ -291,7 +286,7 @@ Column: AMT_ANNUITY_y
 14618.205        1
 6596.055         1
 11514.555        1
-Name: AMT_ANNUITY_y, Length: 328684, dtype: int64
+Name: AMT_ANNUITY_PREV, Length: 328684, dtype: int64
 
 Column: AMT_INCOME_TOTAL
 135000.0    161379
@@ -368,7 +363,7 @@ Column: TOTALAREA_MODE
 0.7512       1
 Name: TOTALAREA_MODE, Length: 5027, dtype: int64
 
-Column: AMT_GOODS_PRICE_x
+Column: AMT_GOODS_PRICE
 225000.0     115505
 450000.0     114021
 675000.0     100199
@@ -380,7 +375,7 @@ Column: AMT_GOODS_PRICE_x
 2142000.0         1
 599787.0          1
 3555000.0         1
-Name: AMT_GOODS_PRICE_x, Length: 969, dtype: int64
+Name: AMT_GOODS_PRICE, Length: 969, dtype: int64
 
 Column: DAYS_FIRST_DRAWING
  365243.0    794001
@@ -492,7 +487,7 @@ Column: REGION_POPULATION_RELATIVE
 0.000290       10
 Name: REGION_POPULATION_RELATIVE, Length: 81, dtype: int64
 
-Column: AMT_ANNUITY_x
+Column: AMT_ANNUITY
 13500.0     18936
 9000.0      18152
 10125.0      6928
@@ -504,9 +499,9 @@ Column: AMT_ANNUITY_x
 76842.0         1
 36639.0         1
 50647.5         1
-Name: AMT_ANNUITY_x, Length: 13361, dtype: int64
+Name: AMT_ANNUITY, Length: 13361, dtype: int64
 
-Column: AMT_CREDIT_x
+Column: AMT_CREDIT
 450000.0     44196
 225000.0     38175
 675000.0     36635
@@ -518,7 +513,7 @@ Column: AMT_CREDIT_x
 3020760.0        1
 1267299.0        1
 433665.0         1
-Name: AMT_CREDIT_x, Length: 5477, dtype: int64
+Name: AMT_CREDIT, Length: 5477, dtype: int64
 
 Column: YEARS_BEGINEXPLUATATION_AVG
 0.9871    19817
@@ -823,7 +818,7 @@ Column: REG_REGION_NOT_LIVE_REGION
 1      16964
 Name: REG_REGION_NOT_LIVE_REGION, dtype: int64
 
-Column: HOUR_APPR_PROCESS_START_x
+Column: HOUR_APPR_PROCESS_START
 10    176225
 11    170757
 12    158055
@@ -848,7 +843,7 @@ Column: HOUR_APPR_PROCESS_START_x
 1        387
 0        194
 23       188
-Name: HOUR_APPR_PROCESS_START_x, dtype: int64
+Name: HOUR_APPR_PROCESS_START, dtype: int64
 
 Column: AMT_REQ_CREDIT_BUREAU_HOUR
 0.0    1234901
@@ -897,7 +892,7 @@ Column: DAYS_REGISTRATION
 -14798.0      1
 Name: DAYS_REGISTRATION, Length: 15598, dtype: int64
 
-Column: HOUR_APPR_PROCESS_START_y
+Column: HOUR_APPR_PROCESS_START_PREV
 11.0    162221
 12.0    156478
 10.0    152843
@@ -922,7 +917,7 @@ Column: HOUR_APPR_PROCESS_START_y
 1.0        180
 23.0       163
 0.0         92
-Name: HOUR_APPR_PROCESS_START_y, dtype: int64
+Name: HOUR_APPR_PROCESS_START_PREV, dtype: int64
 
 Column: DAYS_LAST_PHONE_CHANGE
  0.0       131756
