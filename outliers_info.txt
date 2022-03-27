@@ -1,10 +1,22 @@
-/** Convert to categorical **/
-
 Column: REGION_RATING_CLIENT
 2    1054525
 3     217268
 1     133019
 Name: REGION_RATING_CLIENT, dtype: int64
+
+Column: DAYS_EMPLOYED
+ 365243    271926
+-196          633
+-199          582
+-229          569
+-224          566
+            ...  
+-9172           1
+-12801          1
+-16061          1
+-10800          1
+-10843          1
+Name: DAYS_EMPLOYED, Length: 12438, dtype: int64
 
 Column: REGION_RATING_CLIENT_W_CITY
 2    1067412
@@ -17,34 +29,108 @@ Column: REG_CITY_NOT_WORK_CITY
 1     311885
 Name: REG_CITY_NOT_WORK_CITY, dtype: int64
 
+Column: AMT_REQ_CREDIT_BUREAU_QRT
+0.0      943572
+1.0      177263
+2.0      101782
+3.0       13651
+4.0        4878
+5.0         802
+6.0         294
+8.0          41
+7.0          33
+261.0         6
+Name: AMT_REQ_CREDIT_BUREAU_QRT, dtype: int64
+
 Column: LIVE_CITY_NOT_WORK_CITY
 0    1160417
 1     244395
 Name: LIVE_CITY_NOT_WORK_CITY, dtype: int64
 
-Column: REG_CITY_NOT_LIVE_CITY
-0    1301499
-1     103313
-Name: REG_CITY_NOT_LIVE_CITY, dtype: int64
+Column: AMT_REQ_CREDIT_BUREAU_MON
+0.0     1012939
+1.0      173419
+2.0       28628
+3.0       10338
+4.0        5539
+5.0        3230
+6.0        1786
+7.0        1586
+9.0        1054
+8.0         912
+10.0        691
+11.0        639
+12.0        454
+13.0        379
+15.0        206
+14.0        200
+16.0        134
+17.0         74
+22.0         52
+18.0         26
+19.0         18
+24.0          9
+27.0          6
+23.0          3
+Name: AMT_REQ_CREDIT_BUREAU_MON, dtype: int64
 
-Column: REG_REGION_NOT_WORK_REGION
-0    1343152
-1      61660
-Name: REG_REGION_NOT_WORK_REGION, dtype: int64
+Column: SELLERPLACE_AREA
+-1.0       633226
+ 0.0        50382
+ 50.0       31433
+ 30.0       29451
+ 20.0       28816
+            ...  
+ 953.0          1
+ 1891.0         1
+ 1798.0         1
+ 1186.0         1
+ 1622.0         1
+Name: SELLERPLACE_AREA, Length: 2077, dtype: int64
 
-Column: LIVE_REGION_NOT_WORK_REGION
-0    1354308
-1      50504
-Name: LIVE_REGION_NOT_WORK_REGION, dtype: int64
+Column: DAYS_TERMINATION
+ 365243.0    192921
+-156.0          650
+-233.0          646
+-170.0          635
+-163.0          632
+              ...  
+-2870.0           1
+-2778.0           1
+-2847.0           1
+-2804.0           1
+-2848.0           1
+Name: DAYS_TERMINATION, Length: 2809, dtype: int64
 
-Column: REG_REGION_NOT_LIVE_REGION
-0    1387848
-1      16964
-Name: REG_REGION_NOT_LIVE_REGION, dtype: int64
+Column: DAYS_LAST_DUE
+ 365243.0    179731
+-239.0          567
+-188.0          562
+-245.0          553
+-236.0          544
+              ...  
+-2850.0           1
+-2885.0           1
+-2837.0           1
+-2862.0           1
+-2836.0           1
+Name: DAYS_LAST_DUE, Length: 2869, dtype: int64
 
-=========================================
-/** Bin / Treat as Categorical **/
-Column: DEF_30_CNT_SOCIAL_CIRCLE - 0 is legit
+Column: AMT_APPLICATION
+0.000         323216
+45000.000      39867
+225000.000     36729
+135000.000     34710
+450000.000     32635
+               ...  
+23354.910          1
+268897.500         1
+173866.500         1
+220009.500         1
+293256.225         1
+Name: AMT_APPLICATION, Length: 86514, dtype: int64
+
+Column: DEF_30_CNT_SOCIAL_CIRCLE
 0.0     1233813
 1.0      136549
 2.0       25972
@@ -57,7 +143,21 @@ Column: DEF_30_CNT_SOCIAL_CIRCLE - 0 is legit
 8.0           2
 Name: DEF_30_CNT_SOCIAL_CIRCLE, dtype: int64
 
-Column: DEF_60_CNT_SOCIAL_CIRCLE - 0 is legit
+Column: AMT_CREDIT_y
+0.00         274730
+45000.00      28973
+225000.00     17876
+450000.00     16777
+135000.00     16059
+              ...  
+463972.50         1
+264429.00         1
+125123.94         1
+197284.50         1
+426406.50         1
+Name: AMT_CREDIT_y, Length: 81575, dtype: int64
+
+Column: DEF_60_CNT_SOCIAL_CIRCLE
 0.0     1278668
 1.0      105987
 2.0       15877
@@ -69,7 +169,26 @@ Column: DEF_60_CNT_SOCIAL_CIRCLE - 0 is legit
 24.0          3
 Name: DEF_60_CNT_SOCIAL_CIRCLE, dtype: int64
 
-Column: OBS_30_CNT_SOCIAL_CIRCLE - Bin
+Column: AMT_GOODS_PRICE_y
+45000.000     39867
+225000.000    36730
+135000.000    34696
+450000.000    32651
+90000.000     24782
+              ...  
+23354.910         1
+268897.500        1
+173866.500        1
+220009.500        1
+293256.225        1
+Name: AMT_GOODS_PRICE_y, Length: 86514, dtype: int64
+
+Column: TARGET
+0    1283113
+1     121699
+Name: TARGET, dtype: int64
+
+Column: OBS_30_CNT_SOCIAL_CIRCLE
 0.0      729871
 1.0      220142
 2.0      137713
@@ -141,250 +260,10 @@ Column: OBS_60_CNT_SOCIAL_CIRCLE
 28.0          2
 Name: OBS_60_CNT_SOCIAL_CIRCLE, dtype: int64
 
-Column: CNT_PAYMENT
-12.0    273425
-6.0     161664
-10.0    121695
-0.0     121365
-24.0    116077
-18.0     65157
-36.0     60560
-60.0     45451
-48.0     40509
-8.0      25926
-4.0      23186
-30.0     14521
-14.0      7138
-42.0      6201
-16.0      4751
-5.0       3468
-54.0      1841
-20.0      1600
-7.0       1275
-9.0       1113
-3.0        936
-15.0       835
-11.0       576
-72.0       121
-13.0        48
-84.0        45
-17.0        37
-22.0        32
-23.0        24
-26.0        11
-66.0        10
-35.0         9
-28.0         8
-29.0         6
-32.0         5
-19.0         5
-34.0         3
-59.0         3
-21.0         3
-41.0         3
-39.0         2
-47.0         2
-45.0         2
-38.0         1
-40.0         1
-53.0         1
-33.0         1
-44.0         1
-Name: CNT_PAYMENT, dtype: int64
-
-Column: AMT_REQ_CREDIT_BUREAU_WEEK
-0.0    1196991
-1.0      43833
-2.0        991
-3.0        231
-4.0        133
-6.0         60
-8.0         53
-5.0         24
-7.0          6
-Name: AMT_REQ_CREDIT_BUREAU_WEEK, dtype: int64
-
-Column: CNT_CHILDREN
-0     998783
-1     266820
-2     119595
-3      17116
-4       1912
-5        415
-6         99
-7         19
-10        16
-8          8
-19         8
-9          7
-14         7
-12         4
-11         3
-Name: CNT_CHILDREN, dtype: int64
-
-Column: AMT_REQ_CREDIT_BUREAU_YEAR
-2.0     234942
-1.0     219001
-3.0     209383
-4.0     154458
-0.0     153603
-5.0     107483
-6.0      71495
-7.0      45988
-8.0      27394
-9.0      15844
-12.0       608
-11.0       544
-13.0       362
-10.0       336
-17.0       219
-14.0       205
-15.0       146
-18.0        92
-19.0        71
-16.0        64
-20.0        24
-25.0        23
-21.0        14
-22.0        12
-23.0        11
-Name: AMT_REQ_CREDIT_BUREAU_YEAR, dtype: int64
-
-Column: CNT_FAM_MEMBERS
-2.0     743448
-1.0     300491
-3.0     231600
-4.0     110846
-5.0      16020
-6.0       1857
-7.0        388
-8.0         92
-9.0         17
-12.0        16
-10.0         9
-20.0         8
-11.0         6
-16.0         5
-14.0         4
-13.0         3
-15.0         2
-Name: CNT_FAM_MEMBERS, dtype: int64
-
-Column: HOUR_APPR_PROCESS_START_x
-10    176225
-11    170757
-12    158055
-13    140238
-9     129972
-14    125363
-15    110904
-16     90612
-8      73432
-17     64711
-7      43272
-18     38650
-6      27154
-5      16304
-19     15537
-4       9207
-3       5162
-20      4954
-21      1803
-2       1129
-22       602
-1        387
-0        194
-23       188
-Name: HOUR_APPR_PROCESS_START_x, dtype: int64
-
-Column: AMT_REQ_CREDIT_BUREAU_HOUR
-0.0    1234901
-1.0       7155
-2.0        236
-3.0         26
-4.0          4
-Name: AMT_REQ_CREDIT_BUREAU_HOUR, dtype: int64
-
-Column: AMT_REQ_CREDIT_BUREAU_DAY
-0.0    1235221
-1.0       6412
-2.0        374
-3.0        174
-4.0         68
-6.0         28
-9.0         23
-5.0         22
-Name: AMT_REQ_CREDIT_BUREAU_DAY, dtype: int64
-
-Column: HOUR_APPR_PROCESS_START_y
-11.0    162221
-12.0    156478
-10.0    152843
-13.0    144883
-14.0    132799
-15.0    120114
-9.0     107055
-16.0    101867
-17.0     79729
-8.0      62008
-18.0     53575
-7.0      38674
-19.0     28492
-6.0      21598
-5.0      12954
-20.0     12165
-4.0       7832
-3.0       4145
-21.0      3388
-2.0        942
-22.0       615
-1.0        180
-23.0       163
-0.0         92
-Name: HOUR_APPR_PROCESS_START_y, dtype: int64
-=========================================
-/** Date issues **/
-Column: DAYS_EMPLOYED
- 365243    271926
--196          633
--199          582
--229          569
--224          566
-            ...  
--9172           1
--12801          1
--16061          1
--10800          1
--10843          1
-Name: DAYS_EMPLOYED, Length: 12438, dtype: int64
-
-Column: DAYS_TERMINATION
- 365243.0    192921
--156.0          650
--233.0          646
--170.0          635
--163.0          632
-              ...  
--2870.0           1
--2778.0           1
--2847.0           1
--2804.0           1
--2848.0           1
-Name: DAYS_TERMINATION, Length: 2809, dtype: int64
-
-Column: DAYS_LAST_DUE
- 365243.0    179731
--239.0          567
--188.0          562
--245.0          553
--236.0          544
-              ...  
--2850.0           1
--2885.0           1
--2837.0           1
--2862.0           1
--2836.0           1
-Name: DAYS_LAST_DUE, Length: 2869, dtype: int64
+Column: REG_CITY_NOT_LIVE_CITY
+0    1301499
+1     103313
+Name: REG_CITY_NOT_LIVE_CITY, dtype: int64
 
 Column: DAYS_LAST_DUE_1ST_VERSION
 365243.0    78907
@@ -399,136 +278,6 @@ Column: DAYS_LAST_DUE_1ST_VERSION
 1793.0          1
 1798.0          1
 Name: DAYS_LAST_DUE_1ST_VERSION, Length: 4603, dtype: int64
-
-Column: DAYS_FIRST_DRAWING
- 365243.0    794001
--228.0          115
--224.0          113
--212.0          112
--220.0          111
-              ...  
--1881.0           1
--1626.0           1
--1757.0           1
--1679.0           1
--1857.0           1
-Name: DAYS_FIRST_DRAWING, Length: 2798, dtype: int64
-
-Column: DAYS_FIRST_DUE
- 365243.0    33858
--334.0         653
--299.0         649
--292.0         646
--208.0         645
-             ...  
--2887.0         66
--2890.0         58
--2891.0         44
--2.0            11
--2892.0          5
-Name: DAYS_FIRST_DUE, Length: 2892, dtype: int64
-========================================
-/** Other issues **/
-Column: AMT_REQ_CREDIT_BUREAU_QRT - Number of enquiries. So 0 is legit.
-0.0      943572
-1.0      177263
-2.0      101782
-3.0       13651
-4.0        4878
-5.0         802
-6.0         294
-8.0          41
-7.0          33
-261.0         6
-Name: AMT_REQ_CREDIT_BUREAU_QRT, dtype: int64
-
-Column: AMT_REQ_CREDIT_BUREAU_MON - Number of enquiries. So 0 is legit.
-0.0     1012939
-1.0      173419
-2.0       28628
-3.0       10338
-4.0        5539
-5.0        3230
-6.0        1786
-7.0        1586
-9.0        1054
-8.0         912
-10.0        691
-11.0        639
-12.0        454
-13.0        379
-15.0        206
-14.0        200
-16.0        134
-17.0         74
-22.0         52
-18.0         26
-19.0         18
-24.0          9
-27.0          6
-23.0          3
-Name: AMT_REQ_CREDIT_BUREAU_MON, dtype: int64
-
-Column: SELLERPLACE_AREA - What is the diff between 0 and -1?
--1.0       633226
- 0.0        50382
- 50.0       31433
- 30.0       29451
- 20.0       28816
-            ...  
- 953.0          1
- 1891.0         1
- 1798.0         1
- 1186.0         1
- 1622.0         1
-Name: SELLERPLACE_AREA, Length: 2077, dtype: int64
-
-Column: AMT_APPLICATION - Is 0 legit?
-0.000         323216
-45000.000      39867
-225000.000     36729
-135000.000     34710
-450000.000     32635
-               ...  
-23354.910          1
-268897.500         1
-173866.500         1
-220009.500         1
-293256.225         1
-Name: AMT_APPLICATION, Length: 86514, dtype: int64
-
-Column: AMT_CREDIT_y - Is 0 legit?
-0.00         274730
-45000.00      28973
-225000.00     17876
-450000.00     16777
-135000.00     16059
-              ...  
-463972.50         1
-264429.00         1
-125123.94         1
-197284.50         1
-426406.50         1
-Name: AMT_CREDIT_y, Length: 81575, dtype: int64
-
-Column: AMT_GOODS_PRICE_y - What is the outlier?
-45000.000     39867
-225000.000    36730
-135000.000    34696
-450000.000    32651
-90000.000     24782
-              ...  
-23354.910         1
-268897.500        1
-173866.500        1
-220009.500        1
-293256.225        1
-Name: AMT_GOODS_PRICE_y, Length: 86514, dtype: int64
-
-Column: TARGET - Filter out
-0    1283113
-1     121699
-Name: TARGET, dtype: int64
 
 Column: AMT_ANNUITY_y
 2250.000     26222
@@ -557,6 +306,11 @@ Column: AMT_INCOME_TOTAL
 71748.0          1
 202950.0         1
 Name: AMT_INCOME_TOTAL, Length: 1853, dtype: int64
+
+Column: REG_REGION_NOT_WORK_REGION
+0    1343152
+1      61660
+Name: REG_REGION_NOT_WORK_REGION, dtype: int64
 
 Column: LIVINGAREA_MODE
 0.0000    1846
@@ -627,6 +381,102 @@ Column: AMT_GOODS_PRICE_x
 599787.0          1
 3555000.0         1
 Name: AMT_GOODS_PRICE_x, Length: 969, dtype: int64
+
+Column: DAYS_FIRST_DRAWING
+ 365243.0    794001
+-228.0          115
+-224.0          113
+-212.0          112
+-220.0          111
+              ...  
+-1881.0           1
+-1626.0           1
+-1757.0           1
+-1679.0           1
+-1857.0           1
+Name: DAYS_FIRST_DRAWING, Length: 2798, dtype: int64
+
+Column: LIVE_REGION_NOT_WORK_REGION
+0    1354308
+1      50504
+Name: LIVE_REGION_NOT_WORK_REGION, dtype: int64
+
+Column: CNT_PAYMENT
+12.0    273425
+6.0     161664
+10.0    121695
+0.0     121365
+24.0    116077
+18.0     65157
+36.0     60560
+60.0     45451
+48.0     40509
+8.0      25926
+4.0      23186
+30.0     14521
+14.0      7138
+42.0      6201
+16.0      4751
+5.0       3468
+54.0      1841
+20.0      1600
+7.0       1275
+9.0       1113
+3.0        936
+15.0       835
+11.0       576
+72.0       121
+13.0        48
+84.0        45
+17.0        37
+22.0        32
+23.0        24
+26.0        11
+66.0        10
+35.0         9
+28.0         8
+29.0         6
+32.0         5
+19.0         5
+34.0         3
+59.0         3
+21.0         3
+41.0         3
+39.0         2
+47.0         2
+45.0         2
+38.0         1
+40.0         1
+53.0         1
+33.0         1
+44.0         1
+Name: CNT_PAYMENT, dtype: int64
+
+Column: AMT_REQ_CREDIT_BUREAU_WEEK
+0.0    1196991
+1.0      43833
+2.0        991
+3.0        231
+4.0        133
+6.0         60
+8.0         53
+5.0         24
+7.0          6
+Name: AMT_REQ_CREDIT_BUREAU_WEEK, dtype: int64
+
+Column: DAYS_FIRST_DUE
+ 365243.0    33858
+-334.0         653
+-299.0         649
+-292.0         646
+-208.0         645
+             ...  
+-2887.0         66
+-2890.0         58
+-2891.0         44
+-2.0            11
+-2892.0          5
+Name: DAYS_FIRST_DUE, Length: 2892, dtype: int64
 
 Column: REGION_POPULATION_RELATIVE
 0.035792    73297
@@ -806,6 +656,72 @@ Column: YEARS_BEGINEXPLUATATION_MODE
 0.8992        1
 Name: YEARS_BEGINEXPLUATATION_MODE, Length: 218, dtype: int64
 
+Column: CNT_CHILDREN
+0     998783
+1     266820
+2     119595
+3      17116
+4       1912
+5        415
+6         99
+7         19
+10        16
+8          8
+19         8
+9          7
+14         7
+12         4
+11         3
+Name: CNT_CHILDREN, dtype: int64
+
+Column: AMT_REQ_CREDIT_BUREAU_YEAR
+2.0     234942
+1.0     219001
+3.0     209383
+4.0     154458
+0.0     153603
+5.0     107483
+6.0      71495
+7.0      45988
+8.0      27394
+9.0      15844
+12.0       608
+11.0       544
+13.0       362
+10.0       336
+17.0       219
+14.0       205
+15.0       146
+18.0        92
+19.0        71
+16.0        64
+20.0        24
+25.0        23
+21.0        14
+22.0        12
+23.0        11
+Name: AMT_REQ_CREDIT_BUREAU_YEAR, dtype: int64
+
+Column: CNT_FAM_MEMBERS
+2.0     743448
+1.0     300491
+3.0     231600
+4.0     110846
+5.0      16020
+6.0       1857
+7.0        388
+8.0         92
+9.0         17
+12.0        16
+10.0         9
+20.0         8
+11.0         6
+16.0         5
+14.0         4
+13.0         3
+15.0         2
+Name: CNT_FAM_MEMBERS, dtype: int64
+
 Column: ENTRANCES_MEDI
 0.1379    164310
 0.0690    112536
@@ -902,6 +818,57 @@ Column: ENTRANCES_MODE
 0.8621        61
 Name: ENTRANCES_MODE, dtype: int64
 
+Column: REG_REGION_NOT_LIVE_REGION
+0    1387848
+1      16964
+Name: REG_REGION_NOT_LIVE_REGION, dtype: int64
+
+Column: HOUR_APPR_PROCESS_START_x
+10    176225
+11    170757
+12    158055
+13    140238
+9     129972
+14    125363
+15    110904
+16     90612
+8      73432
+17     64711
+7      43272
+18     38650
+6      27154
+5      16304
+19     15537
+4       9207
+3       5162
+20      4954
+21      1803
+2       1129
+22       602
+1        387
+0        194
+23       188
+Name: HOUR_APPR_PROCESS_START_x, dtype: int64
+
+Column: AMT_REQ_CREDIT_BUREAU_HOUR
+0.0    1234901
+1.0       7155
+2.0        236
+3.0         26
+4.0          4
+Name: AMT_REQ_CREDIT_BUREAU_HOUR, dtype: int64
+
+Column: AMT_REQ_CREDIT_BUREAU_DAY
+0.0    1235221
+1.0       6412
+2.0        374
+3.0        174
+4.0         68
+6.0         28
+9.0         23
+5.0         22
+Name: AMT_REQ_CREDIT_BUREAU_DAY, dtype: int64
+
 Column: DAYS_DECISION
 -245.0     2174
 -238.0     2146
@@ -929,6 +896,33 @@ Column: DAYS_REGISTRATION
 -18616.0      1
 -14798.0      1
 Name: DAYS_REGISTRATION, Length: 15598, dtype: int64
+
+Column: HOUR_APPR_PROCESS_START_y
+11.0    162221
+12.0    156478
+10.0    152843
+13.0    144883
+14.0    132799
+15.0    120114
+9.0     107055
+16.0    101867
+17.0     79729
+8.0      62008
+18.0     53575
+7.0      38674
+19.0     28492
+6.0      21598
+5.0      12954
+20.0     12165
+4.0       7832
+3.0       4145
+21.0      3388
+2.0        942
+22.0       615
+1.0        180
+23.0       163
+0.0         92
+Name: HOUR_APPR_PROCESS_START_y, dtype: int64
 
 Column: DAYS_LAST_PHONE_CHANGE
  0.0       131756
